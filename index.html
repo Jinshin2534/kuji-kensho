@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>くじ検証 — あとから誰でも確かめられるくじ引き</title>
+    <meta name="description" content="主催者は先に種のハッシュだけを公開し、締め切り後に種を明かす。名簿と種から結果が一意に決まるので、誰でも再計算して確かめられるくじ引きです。" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='8' width='84' height='84' rx='14' fill='%23c8322b'/><text x='50' y='70' font-size='56' text-anchor='middle' fill='white' font-family='serif'>検</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="/#">
+        <span class="seal" aria-hidden="true">検</span>
+        <span class="logo-text">くじ検証</span>
+      </a>
+      <nav class="nav">
+        <a href="/#how">しくみ</a>
+        <a href="/#risks">不正の余地</a>
+        <a href="https://github.com/Jinshin2534/kuji-kensho" target="_blank" rel="noopener">ソース</a>
+      </nav>
+    </header>
+    <main id="view" aria-live="polite"></main>
+    <footer class="foot">
+      <p>すべての計算はこのブラウザの中で行います。サーバはなく、くじの中身は URL の「#」より後ろにだけ入っています(# より後ろはサーバに送られません)。</p>
+    </footer>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
